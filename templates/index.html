@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>blog.wetterek.se</title>
+</head>
+<body>
+  <ul>
+    {% for page in section.pages %}
+    <li>
+      <a href="{{ page.permalink | safe }}">{{ page.title }}</a>
+      — {{ page.date | date(format="%Y-%m-%d") }}
+    </li>
+    {% endfor %}
+  </ul>
+</body>
+</html>
