@@ -9,7 +9,7 @@ zola serve --interface 0.0.0.0 --port 1111 --base-url localhost &
 
 # Pull every 30 minutes and restart zola if there are changes
 while true; do
-        sleep 1800
+        sleep 300
         git fetch origin
         LOCAL=$(git rev-parse HEAD)
         REMOTE=$(git rev-parse origin/main)
